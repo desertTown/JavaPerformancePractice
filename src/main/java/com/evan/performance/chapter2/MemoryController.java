@@ -15,6 +15,11 @@ public class MemoryController {
 	
 	/**
 	 * -Xmx32M -Xms32M   启动的时候带上这个参数， 表示最大和最小内存为32M
+	 *
+	 * 当发生内存泄漏的时候， 自动导出到文件到当前目录
+	 * -XX:+HeapDumpOnOutOfMemoryError
+	 * -XX:HeapDumpPath=./
+	 *
 	 * */
 	@GetMapping("/heap")
 	public String heap() {
